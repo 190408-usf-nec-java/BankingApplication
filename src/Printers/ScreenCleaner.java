@@ -8,10 +8,7 @@ package Printers;
 import static Printers.ProccesChecker.isRunning;
 import java.io.IOException;
 
-/**
- *
- * @author Dell
- */
+
 public class ScreenCleaner {
     public static void CLS() throws IOException, InterruptedException{
         
