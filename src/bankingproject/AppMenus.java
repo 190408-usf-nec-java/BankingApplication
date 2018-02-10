@@ -49,7 +49,7 @@ public class AppMenus {
         }
         if ("A".equalsIgnoreCase(selection)) {
             CLS();
-            LoadingBar();
+            
             BoxPrinter("INTERNAL BANK ACCOUNT INFO");
             System.out.println("\n\nADMINISTRATOR BANK ACCOUNT\n-----------------------------\n");
             System.out.println("CURRENT ACCOUNT BALANCE: " + User.ShowBalance() + "\n-----------------------------\n");
@@ -58,8 +58,9 @@ public class AppMenus {
             String CHOICE = scanner.nextLine();
 
             if ("Y".equalsIgnoreCase(CHOICE) || "YES".equalsIgnoreCase(CHOICE)) {
-                SuperAcc();
                 CLS();
+                SuperAcc();
+                
             }
         }
         if ("B".equalsIgnoreCase(selection)) {
