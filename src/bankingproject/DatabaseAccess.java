@@ -27,6 +27,7 @@ public class DatabaseAccess {
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/afdemp_java_1", "root", "root");
         Statement stmt = (Statement) con.createStatement();
         stmt.executeUpdate(query1);
+        con.close();
 
     }
 
@@ -43,6 +44,7 @@ public class DatabaseAccess {
         while (rs.next()) {
             Username = rs.getString("username");
         }
+        con.close();
         return Username;
 
     }
@@ -59,6 +61,7 @@ public class DatabaseAccess {
         while (rs.next()) {
             idr = rs.getInt("id");
         }
+        con.close();
         return idr;
 
     }
