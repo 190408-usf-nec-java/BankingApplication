@@ -43,7 +43,7 @@ public class LoadingScreens {
     }
 
     public static void LogOut() throws InterruptedException, IOException {
-        CLS();
+        
         System.out.print("\n LOGGING OUT.");
         for (int i = 0; i < 2; i++) {
             TimeUnit.SECONDS.sleep(1);
@@ -52,7 +52,7 @@ public class LoadingScreens {
         System.out.println();
         BoxPrinter("BANKING SYSTEM TERMINATED");
         System.out.println("\n");
-
+      System.exit(0);
     }
 
     public static void LoadingBar() throws InterruptedException, IOException {

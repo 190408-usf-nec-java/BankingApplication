@@ -71,8 +71,7 @@ public class LoginScreen {
         }
         if (login == true && !"admin".equals(username)) {
             CLS();
-            BoxPrinter("USER ACCOUNT MANAGEMENT");
-            System.out.println("LOGGED IN AS: " + username);
+      
 
         }
         if (login == true && "admin".equals(username)) {

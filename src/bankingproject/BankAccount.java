@@ -3,6 +3,7 @@ package bankingproject;
 import static Printers.BoxPrinter.BoxPrinter;
 import static Printers.LoadingScreens.LogOut;
 import static Printers.LoadingScreens.TransactionInProgress;
+import static Printers.ScreenCleaner.CLS;
 import static bankingproject.AppMenus.FILE;
 import static bankingproject.DatabaseAccess.DataBaser;
 import static bankingproject.DatabaseAccess.UpdateDbAmount;
@@ -94,10 +95,12 @@ class BankAccount {
         }
         int recip = UsernameToId(recipient);
         if (recip == id) {
+            CLS();
             BoxPrinter("TRANSACTION FAILED");
             System.out.println("YOU CANNOT SEND/RECEIVE MONEY TO/FROM YOUR BANK ACCOUNT");
             BoxPrinter("TERMINATING SYSTEM DUE TO INVALID INPUT");
             LogOut();
+           
         }
         double recipientsbalance = ShowBalanceBasedonID(recip);
         recipientsbalance = recipientsbalance + sendthem;
